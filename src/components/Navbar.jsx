@@ -17,138 +17,143 @@ const Navbar = () => {
       console.log("Searching for:", searchQuery);
     }
   };
-
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex items-center h-20 gap-4">
           {" "}
-          {/* Logo */}
-          <div className="flex items-center">
+          {/* Logo - Left side */}
+          <div className="flex items-center min-w-0 flex-shrink-0">
             <img
               src="/logo.png"
               alt="KPB Logo"
-              className="h-12 w-10 sm:h-14 sm:w-12 rounded-lg mr-2 sm:mr-3"
+              className="h-12 w-10 sm:h-14 sm:w-12 rounded-lg mr-2 sm:mr-3 flex-shrink-0"
             />
-            <span className="text-lg sm:text-2xl font-bold text-blue-600">
-              <span className="hidden sm:inline">KPB Supports Solutions</span>
-              <span className="sm:hidden">KPB Solutions</span>
+            <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-blue-600 whitespace-nowrap">
+              <span className="hidden lg:inline">KPB Supports Solutions</span>
+              <span className="hidden sm:inline lg:hidden">KPB Solutions</span>
+              <span className="sm:hidden">KPB</span>
             </span>
-          </div>
-          {/* Search Bar - Desktop */}
-          <div className="hidden md:flex items-center bg-gradient-to-r from-gray-100 to-white rounded-full px-4 py-2 shadow-md hover:shadow-lg transition-all duration-300">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-              className="bg-transparent border-none outline-none text-gray-700 px-3 py-1 w-64"
-            />
-            <button
-              onClick={handleSearch}
-              className="text-blue-600 hover:text-blue-800 transition-colors"
-            >
-              <Search size={20} />
-            </button>
-          </div>
-          {/* Navigation Links - Desktop */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link
-              to="/"
-              className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                isActive("/")
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              }`}
-            >
-              HOME
-            </Link>{" "}
-            <a
-              href="#services"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("services");
-              }}
-              className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md transition-all duration-300"
-            >
-              SERVICES
-            </a>
-            <Link
-              to="/product"
-              className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                isActive("/product")
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              }`}
-            >
-              PRODUCT
-            </Link>
-            <Link
-              to="/pricing"
-              className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                isActive("/pricing")
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              }`}
-            >
-              PRICING
-            </Link>
-            {/* Resources Dropdown */}
-            <div className="relative">
+          </div>{" "}
+          {/* Center content - Search and Navigation */}
+          <div className="flex-1 flex justify-center items-center gap-4 lg:gap-6 mx-4">
+            {/* Search Bar - Desktop */}
+            <div className="hidden md:flex items-center bg-gradient-to-r from-gray-100 to-white rounded-full px-4 py-2 shadow-md hover:shadow-lg transition-all duration-300">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+                className="bg-transparent border-none outline-none text-gray-700 px-3 py-1 w-40 lg:w-48"
+              />
               <button
-                onClick={() => setIsResourcesOpen(!isResourcesOpen)}
-                className="flex items-center text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md transition-all duration-300"
+                onClick={handleSearch}
+                className="text-blue-600 hover:text-blue-800 transition-colors"
               >
-                RESOURCES
-                <ChevronDown size={16} className="ml-1" />
+                <Search size={20} />
               </button>
-              {isResourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
-                  <Link
-                    to="/about"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    to="/awards"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Awards
-                  </Link>
-                  <Link
-                    to="/certifications"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Certifications
-                  </Link>
-                  <Link
-                    to="/blogs"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Blogs
-                  </Link>
-                </div>
-              )}
             </div>
-            <Link
-              to="/contact"
-              className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                isActive("/contact")
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              }`}
-            >
-              CONTACT US
-            </Link>
+
+            {/* Navigation Links - Desktop */}
+            <div className="hidden lg:flex items-center space-x-2 xl:space-x-4 flex-shrink-0">
+              <Link
+                to="/"
+                className={`px-3 xl:px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap text-sm xl:text-base ${
+                  isActive("/")
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                }`}
+              >
+                HOME
+              </Link>{" "}
+              <a
+                href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("services");
+                }}
+                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-3 xl:px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap text-sm xl:text-base"
+              >
+                SERVICES
+              </a>
+              <Link
+                to="/product"
+                className={`px-3 xl:px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap text-sm xl:text-base ${
+                  isActive("/product")
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                }`}
+              >
+                PRODUCT
+              </Link>{" "}
+              <Link
+                to="/pricing"
+                className={`px-3 xl:px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap text-sm xl:text-base ${
+                  isActive("/pricing")
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                }`}
+              >
+                PRICING
+              </Link>
+              {/* Resources Dropdown */}
+              <div className="relative">
+                {" "}
+                <button
+                  onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                  className="flex items-center text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-3 xl:px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap text-sm xl:text-base"
+                >
+                  RESOURCES
+                  <ChevronDown size={16} className="ml-1" />
+                </button>
+                {isResourcesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                    <Link
+                      to="/about"
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsResourcesOpen(false)}
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      to="/awards"
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsResourcesOpen(false)}
+                    >
+                      Awards
+                    </Link>
+                    <Link
+                      to="/certifications"
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsResourcesOpen(false)}
+                    >
+                      Certifications
+                    </Link>
+                    <Link
+                      to="/blogs"
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsResourcesOpen(false)}
+                    >
+                      Blogs
+                    </Link>
+                  </div>
+                )}
+              </div>{" "}
+              <Link
+                to="/contact"
+                className={`px-3 xl:px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap text-sm xl:text-base ${
+                  isActive("/contact")
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                }`}
+              >
+                CONTACT US
+              </Link>
+            </div>
           </div>
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Mobile menu button - Right side */}
+          <div className="lg:hidden flex-shrink-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 transition-colors"
