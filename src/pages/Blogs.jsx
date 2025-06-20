@@ -395,10 +395,11 @@ const Blogs = () => {
                 and updates.
               </p>
               <div className="space-y-4">
+                {" "}
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-white focus:outline-none focus:ring-2 focus:ring-white"
                 />
                 <button className="w-full bg-white text-blue-600 font-medium py-3 rounded-lg hover:bg-gray-100 transition-colors">
                   Subscribe Now
