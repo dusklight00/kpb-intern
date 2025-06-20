@@ -1,0 +1,23 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 20 Jun 2025 08:04:05 at https://kpbsupportssolutions.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://kpbsupportssolutions.com/ -O1 "C:\KPB\KPB" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+08:04:16	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/certifications.html (from https://kpbsupportssolutions.com/)
+08:04:16	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/blogs.html (from https://kpbsupportssolutions.com/)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/api/placeholder/150/150 (from https://kpbsupportssolutions.com/about.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/api/placeholder/70/70 (from https://kpbsupportssolutions.com/contact.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/product.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/pricing.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/resources.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/about.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/awards.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/certifications.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/blogs.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+08:04:19	Error: 	"Not Found" (404) at link https://kpbsupportssolutions.com/industries/contact.html (from https://kpbsupportssolutions.com/industries/bpm.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 14 seconds : 50 links scanned, 37 files written (668501 bytes overall) [257785 bytes received at 18413 bytes/sec], 667436 bytes transferred using HTTP compression in 48 files, ratio 26%, 10.0 requests per connection
+(12 errors, 0 warnings, 0 messages)

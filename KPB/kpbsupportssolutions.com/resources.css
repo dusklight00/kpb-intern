@@ -1,0 +1,292 @@
+/* resourse */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #1f2756;
+  --text-color: #333;
+  --background-color: #f4f6f7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.container {
+ 
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 20px;
+}
+/* Header Styling */
+.header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+}
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.header p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+}
+.service {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 33%;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.service-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+/* Contact Section */
+.contact-section {
+  background-color: white;
+  padding: 50px 0;
+  margin-top: 50px;
+  text-align: center;
+  border-top: 2px solid var(--secondary-color);
+}
+.consultation-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.consultation-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services {
+      flex-direction: column;
+  }
+  .service {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .header h1 {
+      font-size: 2rem;
+  }
+  .header p {
+      font-size: 1rem;
+  }
+}
+/* Consultation Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: black;
+}
+#consultationForm input, #consultationForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.terms-section {
+  padding: 8rem 2rem;
+  background-color: #f8f9f9;
+  margin-top: 3rem;
+}
+
+.terms-content {
+  max-width: 800px;
+  margin: 8 auto;
+}
+
+.terms-card {
+  background-color: #eee;
+  border: 0.5px solid #1f2756;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.terms-btn {
+  display: inline-block;
+  background-color: #1f2756;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.terms-btn:hover {
+  background-color: #1395d3;
+}
+
+.terms-card h4 {
+  color: #1f2756;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.terms-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+  /* Modal styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.agree-btn {
+    background-color: #1395d3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agree-btn:hover {
+    background-color: #1f2756;
+}
+
+/* Scrollable Content */
+.modal-content p {
+    margin-bottom: 10px;
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+.modal-content ul {
+    list-style-type:square;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.modal-content h1, .modal-content h2 {
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Form styling */
+#agreeForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#agreeForm input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#agreeForm input:focus {
+    border-color: #1f2756;
+    outline: none;
+}

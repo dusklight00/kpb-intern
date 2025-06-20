@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1{
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar li:hover, .sidebar li.active {
+  background-color: #e0e0e0;
+}
+
+.content {
+  width: 80%;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#newcard-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.newcard {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newcard h3 {
+  font-size: 1.5em;
+}
+
+.newcard p {
+  margin: 10px 0;
+}
+
+.newcard .rating {
+  font-size: 0.9em;
+  color: #f39c12;
+}
+
+.card-image{
+  width: 200px;
+  height: 10rem;
+}

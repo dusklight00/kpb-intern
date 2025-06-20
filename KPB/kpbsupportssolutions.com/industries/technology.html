@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from kpbsupportssolutions.com/industries/technology.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Jun 2025 02:34:19 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="all_industries.css">
+  <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="searchResults" class="search-results">
+        <div id="home" class="main">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../logo/logo.png" alt="Logo"><b>KPB Supports Solutions </b>
+                </div>
+                        <div class="search">
+                            <input class="srch" type="search" placeholder="Search...">
+                            <button class="btn" onclick="performSearch()"><i onclick="performSearch()" class="fa fa-search"></i></button>
+                        </div>
+                        <div class="menu">
+                            <ul class="ull">
+                                <li><a class="active" href="#home">HOME</a></li>
+                                <li><a href="#service">SERVICES</a></li>
+                                <li><a href="../product.html">PRODUCT</a></li>
+                                <li><a href="../pricing.html">PRICING</a></li>
+                                <li class="nav-item">
+                                    <a href="resources.html">RESOURCES</a>
+                                    <ul class="dropdown">
+                                        <li><a href="../about.html">About Us</a></li>
+                                        <li><a href="../awards.html">Awards</a></li>
+                                        <li><a href="../certifications.html">Certifications</a></li>
+                                        <li><a href="../blogs.html">Blogs</a></li>
+                                    </ul>
+                                </li>
+                                  
+                                <li><a href="contact.html">CONTACT US</a></li>
+                              
+                            </ul>
+                        </div>
+            </div>
+        
+    
+
+  <h1>Technology</h1>
+  <div class="container">
+    <div class="sidebar">
+        <ul>
+            <li class="active" onclick="changeContent('ec')">Electronic Components</li>
+            <li onclick="changeContent('semiconductors')">Semiconductors</li>
+            <li onclick="changeContent('em')">Electronics Manufacturing</li>
+            <li onclick="changeContent('et')">Emerging Technologies</li>
+            <li onclick="changeContent('h&n')">Hardware & Networking</li>
+            <li onclick="changeContent('callcentre')">Call Centre</li>
+            <li onclick="changeContent('internet')">Internet</li>
+            <li onclick="changeContent('sp')">Sofware product</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="newcard-container">
+            <!-- newcards will be dynamically loaded here -->
+        </div>
+    </div>
+</div>
+</body>
+<script>
+  const courses = {
+  'ec': [
+      { imglink:'../logo/microsoft.webp', title: 'Machine Learning', rating: '4.5', learners: '35,631 learners', duration: '8 weeks' },
+      { imglink:'../logo/ibm.webp', title: 'Advanced Excel', rating: '4.4', learners: '41,295 learners', duration: '4 weeks' },
+      { imglink:'../logo/zomato.webp', title: 'AutoCAD', rating: '4.3', learners: '36,197 learners', duration: '6 weeks' },
+  ],
+  'semiconductors': [
+      { imglink:'../logo/facebook.webp', title: 'Programming with C and C++', rating: '4.6', learners: '30,231 learners', duration: '8 weeks' },
+      { imglink:'../logo/amazon.webp', title: 'JavaScript Basics', rating: '4.7', learners: '50,321 learners', duration: '6 weeks' },
+      { imglink:'../logo/netflix.webp', title: 'Python for Data Science', rating: '4.8', learners: '45,123 learners', duration: '10 weeks' },
+  ],
+  'em': [
+      { imglink:'../logo/ibm.webp', title: 'Business Analytics', rating: '4.4', learners: '29,153 learners', duration: '5 weeks' },
+      { imglink:'../logo/zomato.webp', title: 'Project Management', rating: '4.5', learners: '38,321 learners', duration: '7 weeks' },
+      { imglink:'../logo/amazon.webp', title: 'Marketing Fundamentals', rating: '4.2', learners: '21,632 learners', duration: '6 weeks' },
+  ],
+  'et': [
+      { imglink:'../logo/zomato.webp', title: 'mechanical engineering', rating: '4.9', learners: '29,143 learners', duration: '52 weeks' },
+      { imglink:'../logo/ibm.webp', title: 'civil engineering', rating: '4.5', learners: '38,565 learners', duration: '56 weeks' },
+      { imglink:'../logo/amazon.webp', title: 'computer science engineering', rating: '4.6', learners: '21,765 learners', duration: '120 weeks' },
+  ],
+  'h&n': [
+      { imglink:'../logo/amazon.webp', title: 'Business Analytics', rating: '4.4', learners: '29,153 learners', duration: '5 weeks' },
+      { imglink:'../logo/zomato.webp', title: 'Project Management', rating: '4.5', learners: '38,321 learners', duration: '7 weeks' },
+      { imglink:'../logo/ibm.webp', title: 'Marketing Fundamentals', rating: '4.2', learners: '21,632 learners', duration: '6 weeks' },
+  ],
+  'callcentre': [
+      { imglink:'../logo/facebook.webp', title: 'Business Analytics', rating: '4.4', learners: '29,153 learners', duration: '5 weeks' },
+      { imglink:'../logo/amazon.webp', title: 'Project Management', rating: '4.5', learners: '38,321 learners', duration: '7 weeks' },
+      {  imglink:'../logo/ibm.webp', title: 'Marketing Fundamentals', rating: '4.2', learners: '21,632 learners', duration: '6 weeks' },
+  ],
+  'internet': [
+      { imglink:'../logo/facebook.webp', title: 'Programming with C and C++', rating: '4.6', learners: '30,231 learners', duration: '8 weeks' },
+      { imglink:'../logo/amazon.webp', title: 'JavaScript Basics', rating: '4.7', learners: '50,321 learners', duration: '6 weeks' },
+      { imglink:'../logo/netflix.webp', title: 'Python for Data Science', rating: '4.8', learners: '45,123 learners', duration: '10 weeks' },
+  ],
+  'sp': [
+      { imglink:'../logo/zomato.webp', title: 'mechanical engineering', rating: '4.9', learners: '29,143 learners', duration: '52 weeks' },
+      { imglink:'../logo/ibm.webp', title: 'civil engineering', rating: '4.5', learners: '38,565 learners', duration: '56 weeks' },
+      { imglink:'../logo/amazon.webp', title: 'computer science engineering', rating: '4.6', learners: '21,765 learners', duration: '120 weeks' },
+  ],
+};
+
+
+function changeContent(category) {
+  const newcardContainer = document.getElementById('newcard-container');
+  newcardContainer.innerHTML = ''; // Clear previous content
+
+  courses[category].forEach(course => {
+      const newcard = document.createElement('div');
+      newcard.classList.add('newcard');
+      newcard.innerHTML = `
+          <img class="card-image" src="${course.imglink}" alt="Image 1">
+          <h3>${course.title}</h3>
+          <p class="rating">Rating: ${course.rating}</p>
+          <p>${course.learners}</p>
+          <p>Duration: ${course.duration}</p>
+      `;
+      newcardContainer.appendChild(newcard);
+  });
+
+  // Remove 'active' class from all sidebar items
+  const sidebarItems = document.querySelectorAll('.sidebar li');
+  sidebarItems.forEach(item => item.classList.remove('active'));
+
+  // Add 'active' class to the clicked item
+  document.querySelector(`[onclick="changeContent('${category}')"]`).classList.add('active');
+}
+
+// Initial content load
+changeContent('ec');
+</script>
+
+<!-- Mirrored from kpbsupportssolutions.com/industries/technology.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Jun 2025 02:34:19 GMT -->
+</html>
